@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="todo-app" role="application" aria-labelledby="todo-app-header">
+        <h1 id="todo-app-header">Simple Todo</h1>
+        <section aria-label="Add new task">
+            <input id="new-task-input" type="text" placeholder="What needs to be done?" aria-label="New task input" />
+            <button id="add-task-btn" aria-label="Add task">Add</button>
+        </section>
+        <ul id="task-list" class="task-list" aria-live="polite" aria-label="Task list"></ul>
+        <footer>
+            <div role="group" aria-label="Filter tasks">
+                <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+                <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <button id="clear-completed-btn" aria-label="Clear completed tasks">Clear Completed</button>
+        </footer>
+    </div>
+</body>
+</html>
